@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+    iasa_javatograph_traceability:
+      image: javatograph_traceability:latest
+      container_name: iasa_javatograph_traceability
+      restart: unless-stopped
+      ports:
+	# use 5001 instead of 5000 if you are also deploying the javatograph_patternanalysis container which runs on 5000
+        - 5001:5000
+      command: "python3 projectRestAPI.py"

@@ -1,0 +1,8 @@
+pydriller
+setuptools
+requests
+GitPython
+configparser
+flask
+flask_restful
+
