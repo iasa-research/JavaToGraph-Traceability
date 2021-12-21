@@ -1,0 +1,21 @@
+//Singleton Pattern
+
+SgP-R05: Die Sichtbarkeit des Konstruktors der Singleton Klasse muss privat sein
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'SingletonClass'}) set n.constructorprivate = true
+
+SgP-R06: Die Singleton Klasse muss ein privates statisches Klassenattribut besitzen, in welchem das Singleton Objekt gespeichert ist
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'SingletonClass'}) set n.privatestaticclassvar = true
+
+SgP-R07: Die Singleton Klasse muss eine statische Getter Methode besitzen, um das Singleton Objekt zu liefern
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'SingletonClass'}) set n.gettermethod = true
+
+//Round Tripping Persistent Object
+
+RtO-R06: Es findet ein Aufruf einer Create-Methode in der DAO durch die Testklasse statt
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'TestClass'}) set n.calldaocreate = true
+
+RtO-R07: Es findet ein Aufruf einer Create-Methode in der DAO durch die Testklasse statt
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'TestClass'}) set n.calldaoread = true
+
+RtO-R08: Die Vergleichsklasse implementiert eine Equals-Methode:
+match(n:File)-[r:`ASSOCIATED-WITH`]-(m:Patterncomponent {componentname:'CompareClass'}) set n.implementsequalsmethod = true

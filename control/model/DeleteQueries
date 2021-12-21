@@ -1,0 +1,5 @@
+// delete all patterncomponents and all nodes in any relationship to them (all patternnodes)
+match(n:Patterncomponent) detach delete(n)
+
+// delete all
+match(n) detach delete(n)

@@ -1,0 +1,15 @@
+.idea/
+
+*.iml
+
+*.jar
+
+*.ini
+
+test.py
+
+*.pyc
+
+
+
+

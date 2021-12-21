@@ -1,0 +1,2 @@
+// get all patterncomponent- and pattern nodes with relationships between them
+match(n:Patterncomponent)<--(m:Pattern) return n, m
