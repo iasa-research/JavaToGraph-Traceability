@@ -38,6 +38,13 @@ docker run -p 5000:5000/tcp -d javatograph_traceability python3 projectRestAPI.p
 * and uses the deamon flag -d to start the application in the background 
 * and uses the command `python3 projectRestAPI.py` within the container right after startup 
 
+### Usage 
+Example for a project with project id 1 in iasa-global:
+
+create a project: `curl <your ip/localhost>:5001/createproject -d "project_id=1" -X POST`
+update a project: `curl <your ip/localhost>:5001/updateproject -d "project_id=1" -X POST`
+see project_id for a specific request: `curl <your ip/localhost>:5001/request/<request_id>`
+
 ### Debugging 
 #### FAQ 
 Check the FAQs in FAQ.md before you start debugging.
@@ -48,7 +55,7 @@ Check the FAQs in FAQ.md before you start debugging.
 * start: `docker start <containername>`
 * stop: `docker stop <containername>`
 * delete container: `docker kill <containername>`
-* remove image: `docker rmi <imagename>
+* remove image: `docker rmi <imagename>`
 
 #### Start up 
 * run the image/ start the container without the -d flag, then you get all output directly 
